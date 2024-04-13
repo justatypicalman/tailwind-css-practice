@@ -48,12 +48,63 @@
 // const mappedResult = evenOnly.map((num) => num - 1);
 // console.log(evenOnly);
 
-let array = ["Eric", "Pogi", "Sobra", "hehe"];
-let filteredArray = array.filter((index) => index.length === 4);
-let capitalization = filteredArray.filter(
-  (num) => filteredArray[num] !== "Eric"
-);
-let lowerCaseArray = capitalization.toLowerCase();
-let result = lowerCaseArray.join(" ");
+// let array = ["Eric", "Pogi", "Sobra", "hehe"];
+// let filteredArray = array.filter((index) => index.length === 4);
+// let capitalization = filteredArray.filter(
+//   (num) => filteredArray[num] !== "Eric"
+// );
+// let lowerCaseArray = capitalization.toLowerCase();
+// let result = lowerCaseArray.join(" ");
 
-alert(result);
+// alert(result);
+
+//ARROW FUNCTION
+
+<button
+  onClick={() => {
+    console.log("hello");
+  }}
+></button>;
+//Ternary Operator
+let age = 10;
+const name = "Eric";
+
+//OR
+
+const Component = () => {
+  return age > 10 ? <div>Pedro</div> : <div>Eric</div>;
+};
+
+//destructuring objects
+
+const person = {
+  name,
+  age,
+  married: false,
+};
+
+// const { name, age, married } = person;
+
+const person2 = {
+  name,
+  age,
+  married: false,
+};
+
+const person3 = { ...person, name: "Eric2" };
+
+//React Way of adding arrays
+
+const names = ["Eric", "Michael", "Roy"];
+const names2 = [...names, "Dango"];
+console.log(names2);
+
+/*
+.map()
+.filter()
+.reduce() //not that important
+*/
+
+names.map((name) => {
+  return <h1>{name}</h1>;
+});
